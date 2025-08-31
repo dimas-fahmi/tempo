@@ -1,6 +1,6 @@
 "use client";
 
-import { geistMono, geistSans } from "@/src/ui/fonts";
+import { audioWide, geistMono, geistSans } from "@/src/ui/fonts";
 import "@/src/ui/css/globals.tailwind.css";
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${audioWide.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

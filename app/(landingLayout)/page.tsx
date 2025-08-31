@@ -10,6 +10,8 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <Hero />
+
+      <div className="min-h-[1000px]"></div>
     </main>
   );
 }
