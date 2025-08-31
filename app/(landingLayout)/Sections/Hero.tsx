@@ -16,8 +16,9 @@ const Hero = () => {
             Oops, Did You Just Killed Your Plant Again?
           </h1>
           <p className="font-sans">
-            With Tempo you'll never forget important events anymore, wether it's
-            your favorite soccer team's matchday to your girlfriend's birthday!
+            With Tempo you&apos;ll never forget important events anymore, wether
+            it&apos;s your favorite soccer team&apos;s matchday to your
+            girlfriend&apos;s birthday!
           </p>
 
           {/* CTA */}
