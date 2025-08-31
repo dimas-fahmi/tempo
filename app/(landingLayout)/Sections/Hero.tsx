@@ -9,11 +9,11 @@ const Hero = () => {
       className="flex flex-col-reverse md:flex-row gap-6 justify-between"
     >
       {/* Content Container */}
-      <div className="flex items-center">
+      <div className="flex items-center pt-4 md:pt-8">
         {/* Content Wrapper */}
         <div className="max-w-lg space-y-7">
-          <h1 className="text-4xl font-header mb-4">
-            Don't Lose Track, Keep It Ticking!
+          <h1 className="text-5xl font-header mb-4">
+            Oops, Did You Just Killed Your Plant Again?
           </h1>
           <p className="font-sans">
             With Tempo you'll never forget important events anymore, wether it's
@@ -21,11 +21,13 @@ const Hero = () => {
           </p>
 
           {/* CTA */}
-          <div className="grid grid-cols-2 mt-6 items-center gap-4">
-            <Button style={"pill"} variant={"outline"}>
+          <div className="grid grid-cols-1 mt-6 items-center gap-4">
+            <Button style={"pill"} size={"lg"} variant={"outline"}>
               Login
             </Button>
-            <Button style={"pill"}>Register</Button>
+            <Button style={"pill"} size={"lg"}>
+              Register
+            </Button>
           </div>
         </div>
       </div>
