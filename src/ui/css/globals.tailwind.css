@@ -132,6 +132,28 @@ body {
   }
 }
 
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
+
 .scroll-disable {
   margin: 0;
   height: 100%;
