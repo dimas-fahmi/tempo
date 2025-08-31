@@ -4,7 +4,10 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section id="hero" className="flex justify-between">
+    <section
+      id="hero"
+      className="flex flex-col-reverse md:flex-row gap-6 justify-between"
+    >
       {/* Content Container */}
       <div className="flex items-center">
         {/* Content Wrapper */}
