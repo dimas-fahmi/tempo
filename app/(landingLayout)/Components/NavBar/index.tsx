@@ -3,7 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { BookOpen, Calendar, Github, Menu, Newspaper } from "lucide-react";
+import {
+  BookOpen,
+  Calendar,
+  CircleX,
+  Github,
+  Menu,
+  Newspaper,
+  Pickaxe,
+  StickyNote,
+} from "lucide-react";
 import { Button } from "@/src/ui/shadcn/ui/button";
 import { motion } from "motion/react";
 
@@ -19,14 +28,24 @@ const navlinks = [
     href: "/events",
   },
   {
+    icon: Pickaxe,
+    label: "Projects",
+    href: "/projects",
+  },
+  {
     icon: Newspaper,
     label: "Blog",
     href: "/blog",
   },
   {
+    icon: StickyNote,
+    label: "Note",
+    href: "/note",
+  },
+  {
     icon: Github,
     label: "Repository",
-    href: "/something",
+    href: "https://github.com/dimas-fahmi/tempo",
   },
 ];
 
@@ -52,6 +71,7 @@ const NavBar = () => {
             height={80}
             src={"/resources/Logo/Transparent/Label.png"}
             alt="Tempo's Logo"
+            className="min-w-[120px]"
           />
         </div>
 
@@ -60,7 +80,12 @@ const NavBar = () => {
           {navlinks.map(({ href, label }, item) => {
             return (
               <li key={item}>
-                <Link href={href}>{label}</Link>
+                <Link
+                  href={href}
+                  className="font-sans opacity-80 hover:px-4 hover:opacity-100 transition-all duration-300 underline-hover"
+                >
+                  {label}
+                </Link>
               </li>
             );
           })}
@@ -82,6 +107,14 @@ const NavBar = () => {
         </div>
       </nav>
 
+      {/* Overlay */}
+      <div
+        className={`${
+          open ? "opacity-70" : "opacity-0 pointer-events-none"
+        } fixed transition-all duration-300 inset-0 bg-black z-30`}
+        onClick={() => setOpen(false)}
+      ></div>
+
       {/* Sidebar */}
       <motion.div
         initial={{ y: -500, scale: 0.5 }}
@@ -102,10 +135,15 @@ const NavBar = () => {
         } absolute z-40 border rounded-md top-24 bg-background shadow-2xl right-0 left-0 mx-6 md:mx-auto p-4 max-w-md`}
       >
         {/* CTA */}
-        <h1 className="text-2xl font-bold font-header mb-4">Navigation</h1>
+        <header className="flex items-center justify-between">
+          <h1 className="text-2xl font-bold font-header mb-4">Navigation</h1>
+          <Button variant={"outline"} onClick={() => setOpen(false)}>
+            <CircleX />
+          </Button>
+        </header>
 
         {/* Navigation Links */}
-        <ul className="grid grid-cols-4 gap-4 items-center">
+        <ul className="grid grid-cols-3 gap-4 items-center">
           {navlinks.map((nav, index) => {
             const Icon = nav.icon;
 
