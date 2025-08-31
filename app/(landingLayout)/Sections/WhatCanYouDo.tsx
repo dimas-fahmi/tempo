@@ -15,7 +15,7 @@ const WhatCanYouDo = () => {
       />
 
       {/* Content Container */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Card */}
         {Array(4)
           .fill("")
@@ -27,7 +27,7 @@ const WhatCanYouDo = () => {
               {/* Header */}
               <header className="flex justify-between items-center mb-4">
                 <h1 className="text-lg font-header">
-                  Announcing Kaggle Game Arena
+                  Never Miss Important Events Again
                 </h1>
                 <Image
                   width={80}
@@ -40,11 +40,10 @@ const WhatCanYouDo = () => {
               {/* Content */}
               <div>
                 <h2 className="text-sm uppercase font-header opacity-70">
-                  Blog
+                  Countdown
                 </h2>
-                <p className="text-xs opacity-70 font-sans">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-                  a esse rem tenetur pariatur.
+                <p className="text-xs opacity-70 font-sans mt-0.5">
+                  {`Keep track how many hours, minutes and seconds until Arsenal vs Liverpool or simply your Girlfriend's Birthday.`}
                 </p>
               </div>
             </div>
