@@ -1,4 +1,6 @@
 import { Button } from "@/src/ui/shadcn/ui/button";
+import Google from "@/src/ui/svg/Google";
+import { KeyRound } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -9,25 +11,27 @@ const Hero = () => {
       className="flex flex-col-reverse md:flex-row gap-6 justify-between"
     >
       {/* Content Container */}
-      <div className="flex items-center pt-4 md:pt-8">
+      <div className="flex items-center pt-4">
         {/* Content Wrapper */}
         <div className="max-w-lg space-y-7">
-          <h1 className="text-5xl font-header mb-4">
-            Oops, Did You Just Killed Your Plant Again?
+          <h1 className="text-5xl font-header mb-4 md:leading-14">
+            Oops, Forgot To Feed The Cat Again Did You?
           </h1>
           <p className="font-sans">
-            With Tempo you&apos;ll never forget important events anymore, wether
-            it&apos;s your favorite soccer team&apos;s matchday to your
-            girlfriend&apos;s birthday!
+            {`With Tempo you'll never forget important events anymore, wether
+            it's your favorite soccer team's matchday to your
+            girlfriend's birthday!
+            `}
           </p>
 
           {/* CTA */}
           <div className="grid grid-cols-1 mt-6 items-center gap-4">
             <Button style={"pill"} size={"lg"} variant={"outline"}>
-              Login
+              <Google />
+              <span>Continue With Google</span>
             </Button>
             <Button style={"pill"} size={"lg"}>
-              Register
+              <KeyRound /> Login or Register
             </Button>
           </div>
         </div>
@@ -39,7 +43,9 @@ const Hero = () => {
         <Image
           width={500}
           height={500}
-          src={"/resources/Illustration Arts/hero-placeholder.png"}
+          src={
+            "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-starving-cat.png"
+          }
           alt="Hero Placeholder"
         />
       </div>
