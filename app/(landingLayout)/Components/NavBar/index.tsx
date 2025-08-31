@@ -57,18 +57,13 @@ const NavBar = () => {
 
         {/* Navigation Links */}
         <ul className="hidden md:flex w-full gap-4 items-center">
-          <li>
-            <Link href={"/"}>Docs</Link>
-          </li>
-          <li>
-            <Link href={"/"}>Events</Link>
-          </li>
-          <li>
-            <Link href={"/"}>Blog</Link>
-          </li>
-          <li>
-            <Link href={"/"}>About</Link>
-          </li>
+          {navlinks.map(({ href, label }, item) => {
+            return (
+              <li key={item}>
+                <Link href={href}>{label}</Link>
+              </li>
+            );
+          })}
         </ul>
 
         {/* CTA */}
