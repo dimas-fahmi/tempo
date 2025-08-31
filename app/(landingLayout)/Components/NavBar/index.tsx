@@ -99,7 +99,7 @@ const NavBar = () => {
         }
         className={`${
           open ? "" : ""
-        } absolute z-40 border rounded-md top-24 right-0 left-0 mx-6 md:mx-auto p-4 max-w-md`}
+        } absolute z-40 border rounded-md top-24 bg-background shadow-2xl right-0 left-0 mx-6 md:mx-auto p-4 max-w-md`}
       >
         {/* CTA */}
         <h1 className="text-2xl font-bold font-header mb-4">Navigation</h1>
