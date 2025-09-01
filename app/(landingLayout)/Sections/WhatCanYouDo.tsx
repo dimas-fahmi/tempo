@@ -50,13 +50,19 @@ const WhatCanYouDo = () => {
         {/* Card */}
         {items.map((item, index) => (
           <div
-            className="border p-4 rounded-md shadow-sm hover:shadow-2xl cursor-pointer transition-all duration-300"
+            className="border p-4 rounded-2xl shadow-sm hover:shadow-2xl cursor-pointer transition-all duration-300"
             key={index}
           >
             {/* Header */}
             <header className="flex justify-between items-center mb-4">
               <h1 className="text-lg font-header">{item.title}</h1>
-              <Image width={80} height={80} src={item.illo} alt="Placeholder" />
+              <Image
+                width={80}
+                height={80}
+                className="w-16"
+                src={item.illo}
+                alt="Placeholder"
+              />
             </header>
 
             {/* Content */}
