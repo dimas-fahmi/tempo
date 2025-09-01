@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col-reverse md:flex-row gap-6 justify-between"
+      className="flex flex-col md:flex-row gap-6 justify-between"
     >
       {/* Content Container */}
       <div className="flex items-center pt-4">
