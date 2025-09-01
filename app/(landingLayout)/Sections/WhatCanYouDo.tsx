@@ -12,21 +12,21 @@ const items = [
       "Track the days, hours, and minutes left until any event—whether it’s the big match Arsenal vs Liverpool or your girlfriend’s birthday.",
   },
   {
-    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-clocky.png",
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-clippy-new.png",
     title: "Organize, Stay on Top of Your Tasks!",
     label: "To-Do List",
     overview:
       "Organize projects with tasks and subtasks so nothing slips through the cracks. Perfect for both work and personal goals.",
   },
   {
-    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-clocky.png",
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-pomodoro.png",
     title: "Boost Focus With Smart Breaks!",
     label: "Pomodoro",
     overview:
       "Work in focused sprints and recharge with timed breaks. A proven technique to maximize productivity and prevent burnout.",
   },
   {
-    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-clocky.png",
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-notty.png",
     title: "Capture Thoughts & Ideas!",
     label: "Notes / Journal",
     overview:

@@ -47,6 +47,7 @@ const Hero = () => {
             "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-starving-cat.png"
           }
           alt="Hero Placeholder"
+          priority={true}
         />
       </div>
     </section>
