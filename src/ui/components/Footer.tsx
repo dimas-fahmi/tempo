@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+
   return (
     <footer className="max-w-7xl text-card-foreground m-auto space-y-6 px-4 lg:px-0">
       {/* Content Wrapper */}
@@ -97,7 +102,7 @@ const Footer = () => {
         {/* More Section */}
         <div className="md:flex md:justify-between text-center lg:text-start">
           {/* Copyright section */}
-          <div>2024 Tempo - Made With NextJS by Dimas Fahmi</div>
+          <div>{year} Tempo - Made With NextJS by Dimas Fahmi</div>
 
           {/* Credits Section */}
           <div>Inspired by Kaggle, Positivus and More</div>
