@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "./Sections/Hero";
 import WhatCanYouDo from "./Sections/WhatCanYouDo";
+import Section from "./Components/Section";
 
 export const metadata: Metadata = {
   title: "Tempo | Stay on Track, Stay in Tempo",
@@ -54,7 +55,15 @@ export default function Home() {
       {/* What Can You Do Section */}
       <WhatCanYouDo />
 
-      <div className="min-h-[1000px]"></div>
+      {/* Avoid Mess Section */}
+      <Section
+        illo="https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-organized-dude.png"
+        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, voluptates excepturi architecto facilis deleniti, et optio molestias placeat accusamus temporibus sed voluptatibus totam omnis nemo dignissimos laboriosam odit."
+        title="Why You Should Start Organizing Your Life?"
+        illoAlt="Organize Dude Art"
+        className="hidden md:flex mb-16"
+        reverse
+      />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
+import Footer from "@/src/ui/components/Footer";
 
 const LandingLayout = ({
   children,
@@ -15,6 +16,7 @@ const LandingLayout = ({
       {children}
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 };
