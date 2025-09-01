@@ -3,6 +3,37 @@ import { MessageCircleQuestionMark } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
+const items = [
+  {
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-clocky.png",
+    title: "Never Miss Important Moments!",
+    label: "Countdown",
+    overview:
+      "Track the days, hours, and minutes left until any event—whether it’s the big match Arsenal vs Liverpool or your girlfriend’s birthday.",
+  },
+  {
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-clippy-new.png",
+    title: "Organize, Stay on Top of Your Tasks!",
+    label: "To-Do List",
+    overview:
+      "Organize projects with tasks and subtasks so nothing slips through the cracks. Perfect for both work and personal goals.",
+  },
+  {
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-pomodoro.png",
+    title: "Boost Focus With Smart Breaks!",
+    label: "Pomodoro",
+    overview:
+      "Work in focused sprints and recharge with timed breaks. A proven technique to maximize productivity and prevent burnout.",
+  },
+  {
+    illo: "https://zvgpixcwdvbogm3e.public.blob.vercel-storage.com/tempo/arts/illo-notty.png",
+    title: "Capture Thoughts & Ideas!",
+    label: "Notes / Journal",
+    overview:
+      "Write down quick notes, reflect on your day, or keep a journal of your progress. A simple space for your ideas and memories.",
+  },
+];
+
 const WhatCanYouDo = () => {
   return (
     <section id="whatCanYouDo">
@@ -17,37 +48,34 @@ const WhatCanYouDo = () => {
       {/* Content Container */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Card */}
-        {Array(4)
-          .fill("")
-          .map((_, index) => (
-            <div
-              className="border p-4 rounded-md shadow-sm hover:shadow-2xl cursor-pointer transition-all duration-300"
-              key={index}
-            >
-              {/* Header */}
-              <header className="flex justify-between items-center mb-4">
-                <h1 className="text-lg font-header">
-                  Never Miss Important Events Again
-                </h1>
-                <Image
-                  width={80}
-                  height={80}
-                  src={"/resources/Illustration Arts/placeholder-art.svg"}
-                  alt="Placeholder"
-                />
-              </header>
+        {items.map((item, index) => (
+          <div
+            className="border p-4 rounded-2xl shadow-sm hover:shadow-2xl cursor-pointer transition-all duration-300"
+            key={index}
+          >
+            {/* Header */}
+            <header className="flex justify-between items-center mb-4">
+              <h1 className="text-lg font-header">{item.title}</h1>
+              <Image
+                width={80}
+                height={80}
+                className="w-16"
+                src={item.illo}
+                alt="Placeholder"
+              />
+            </header>
 
-              {/* Content */}
-              <div>
-                <h2 className="text-sm uppercase font-header opacity-70">
-                  Countdown
-                </h2>
-                <p className="text-xs opacity-70 font-sans mt-0.5">
-                  {`Keep track how many hours, minutes and seconds until Arsenal vs Liverpool or simply your Girlfriend's Birthday.`}
-                </p>
-              </div>
+            {/* Content */}
+            <div>
+              <h2 className="text-sm uppercase font-header opacity-70">
+                {item.label}
+              </h2>
+              <p className="text-xs opacity-70 font-sans mt-0.5">
+                {item.overview}
+              </p>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
     </section>
   );
